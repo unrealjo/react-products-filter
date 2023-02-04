@@ -1,4 +1,4 @@
-{
+const fetchedData = {
     "products": [
         {
             "id": 1,
@@ -185,3 +185,4 @@
     "skip": 0,
     "limit": 10
 }
+export default fetchedData
