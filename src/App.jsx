@@ -1,9 +1,9 @@
 import { useState } from "react"
-import res from "../data/products.json"
+import fetchedData from "./data"
 import Product from './Product';
 
 function App() {
-    const [data, setData] = useState(res.products)
+    const [data, setData] = useState(fetchedData.products)
     const [error, setError] = useState(false)
     /*
     *   @param {event} e
@@ -11,7 +11,7 @@ function App() {
     const handleChange = (e) => {
         if (e.target.value == "") {
             setError(false)
-            setData(res.products)
+            setData(fetchedData.products)
             return
         }
         let products = data.filter((p) => p.title.includes(e.target.value))
