@@ -9,8 +9,8 @@ function App() {
     *   @param {event} e
     */
     const handleChange = (e) => {
+        setError(false)
         if (e.target.value == "") {
-            setError(false)
             setData(fetchedData.products)
             return
         }
@@ -18,10 +18,9 @@ function App() {
         if (products.length == 0) {
             setData([])
             setError(true)
-        } else {
-            setData([...products])
-            setError(false)
+            return
         }
+        setData([...products])
     }
     return (
         <>
